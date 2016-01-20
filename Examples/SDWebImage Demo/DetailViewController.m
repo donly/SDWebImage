@@ -34,9 +34,12 @@
     if (self.imageURL) {
         __block UIActivityIndicatorView *activityIndicator;
         __weak UIImageView *weakImageView = self.imageView;
+        [[SDWebImageManager.sharedManager imageDownloader] setValue:@"Mozilla/5.0 (iPod; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1"
+                                                 forHTTPHeaderField:@"User-Agent"];
+        
         [self.imageView sd_setImageWithURL:self.imageURL
                           placeholderImage:nil
-                                   options:SDWebImageProgressiveDownload
+                                   options:SDWebImageRetryFailed
                                   progress:^(NSInteger receivedSize, NSInteger expectedSize) {
                                       if (!activityIndicator) {
                                           [weakImageView addSubview:activityIndicator = [UIActivityIndicatorView.alloc initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray]];

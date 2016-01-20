@@ -36,7 +36,9 @@
         [SDWebImageManager sharedManager].imageDownloader.password = @"httpwatch01";
         
         _objects = [NSArray arrayWithObjects:
-                    @"http://www.httpwatch.com/httpgallery/authentication/authenticatedimage/default.aspx?0.35786508303135633",     // requires HTTP auth, used to demo the NTLM auth
+                    @"http://www.yaokantv.com/inter_nas/images/interact_ad/67000/67131.png?1451568891",
+                    @"http://img4.imgtn.bdimg.com/it/u=2496578486,2607734154&fm=21&gp=0.jpg",
+                    @"http://www.httpwatch.com/httpgallery/authentication/authenticatedimage/default.aspx?0.35786508303135633",// requires HTTP auth, used to demo the NTLM auth
                     @"http://assets.sbnation.com/assets/2512203/dogflops.gif",
                     @"http://www.ioncannon.net/wp-content/uploads/2011/06/test2.webp",
                     @"http://www.ioncannon.net/wp-content/uploads/2011/06/test9.webp",
